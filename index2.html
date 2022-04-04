@@ -15,6 +15,9 @@
             font-size: 20px;
         }
     </style>
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 <body>
     <!-- Lists and list items-->
@@ -62,5 +65,58 @@
     <!--images-->
     <img alt="This is an image"  style="width:40px; height:40px" src=""/>
 
+
+    <!-- Forms-->
+    <!--Two main attributes-->
+    <!--method and action-->
+    <!--method is HOW to send data and action is WHERE to send data-->
+
+    <!-- GET method - it sends an  input into the URL bar, with a -  key : value pair - uses a hyperlink -->
+    <form method="get" action="search.html">
+        <h4>GET form</h4>
+        <!-- an input for text-->
+        <input name="query" type="text"/>
+        <!-- a button to submit the form -->
+        <button type="submit">SEND</button>
+    </form>
+
+    <!-- post method - sends data to action URL-->
+    <form method="post" action="./mailform.php">
+        <h4>
+            POST form
+        </h4>
+        <input name="message" type="text"/>
+        <button type="submit">
+            MAIL
+        </button>
+    </form>
+
+    <!-- YOU DONT NEED AN ACTION OR A METHOD TO MAKE A FORM-->
+
+    <form>
+        <h4>
+            More inputs
+        </h4>
+        <input type="checkbox" name="checkbox1"
+        value="1"/>1
+        
+        <!-- radio buttons - they can be linked together-->
+        <fieldset>
+            <legend>Question 1</legend>
+            <input type="Radio" name="choice" value="a"/>a
+            <input type="Radio" name="choice" value="b"/>b
+            <input type="Radio" name="choice" value="c"/>c
+            <input type="Radio" name="choice" value="d"/>d
+        </fieldset>
+
+        <!-- date selection-->
+        <input type="date" name="booking"/>
+
+        <!-- color-->
+        <input type="color" name="shading"/>
+    </form>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>
