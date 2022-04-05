@@ -98,6 +98,6 @@ console.log(`The length of the array is: ` + myArray.length);
 myArray.push(1, `chicken`,`nugget`);
 console.log(`The length of the array is now: ` + myArray.length)
 myArray.shift();
-for (let i = 0; i<myArray.length; i++) {
-    console.log(myArray[i]);
+for (let i of myArray) {
+    console.log(i);
 }
