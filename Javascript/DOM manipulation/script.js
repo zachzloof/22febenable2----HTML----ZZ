@@ -33,12 +33,13 @@ DOM.textButton.onclick = () => addToList(DOM.textInput.value);
 
 //EXCERSIZE
 //1.
-
+let count = 1;
 let addScare = () => {
     let child = document.createElement(`h1`);
     let scare = "BOOOOO!";
-    child.id = "heading";
+    child.id = `heading`; //${count}
     child.innerHTML = scare;
+    count++;
     document.getElementById(`division`).appendChild(child);
 }
 DOM.scaryButton.onclick = () => addScare();
@@ -49,6 +50,7 @@ let deleteScare = () => {
     let child = document.getElementById("heading");
     let parent = document.getElementById("division");
     parent.removeChild(child);
+    count--;
 }
 DOM.notscaryButton.onclick = () => deleteScare();
 
