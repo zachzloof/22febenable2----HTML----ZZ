@@ -5,3 +5,5 @@ export const buttonDiv = document.getElementById(`button_divide`);
 export const buttonMul = document.getElementById(`button_multiply`);
 export const textOutput = document.getElementById(`list_output`);
 export const buttonSub = document.getElementById(`button_subtract`)
+export const buttonReset = document.getElementById(`button_reset`)
+export const buttonResult = document.getElementById(`button_result`)
