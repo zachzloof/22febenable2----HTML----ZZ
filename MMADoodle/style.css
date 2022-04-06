@@ -3,6 +3,9 @@ body {
     text-align: center;
     font-family: Century Gothic;
   }
+  fieldset {
+    margin-left: 26%;
+  }
   a {
     color: black;
   }
