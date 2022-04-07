@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        REST
+        Architectual style
+        Representational state transfer
+        networked applications
+
+        CONSTRAINTS OF REST
+        Client-Server: 
+            -> Client requests data from server and the server responds with data
+        Requests and responses
+            -> Often called messages
+            -> HTTP requests are made up
+                -> request line
+                    -> This will have the method (The operatiion you want to perform) and a path (Where we perform this operation)
+                -> headers
+                    -> Contain info about the message, inc metadata (Who sent it, when it was sent, data types being sent, etc)
+                -> message body
+                    -> The actual content of the message, data being sent.
+
+        Responses are the same BUT have a status line instead of a request line.
+        status line contains a status code and a status text (404 not found)
+
+        UNIFORM INTERFACE
+        -> the interferface or connection between the server and any client should be immutable.
+        -> The client and server can evolve seperately
+
+        STATELESS
+        -> each request should contain ALL information needed to handle a transaction
+        -> It makes the server much more efficient
+
+        CACHEABLE
+        -> On the client-side when data is receieved it should contain info on if it can be cacheable
+        -> This optimizes performance and save on data transfer costs.
+
+        LAYERED SYSTEM  
+        -> As we scale infrastructure on the server it should have NO effect on any of the clients. 
+        -> It allows us to add middleware.
+
+        REST IN ACTION
+        CRUD 
+        Create
+        Read
+        Update
+        Delete
+    
+    HTTP REQUEST METHODS
+    ->GET - READ
+    ->HEAD
+    ->POST - CREATE
+    ->PUT - UPDATE
+    ->DELETE - DELETE
+    ->TRACE
+    ->CONNECT
+    ->OPTIONS
+    ->PATCH - UPDATE
+
+    POST METHODS
+    -> used for creating resources
+    -> data sent in message body
+    -> response -> code: 201
+                -> text : created
+    POST /houses/create/
+    'content-type : application/JSON'
+    {
+        address: "1, road",
+        postcode: "ab1 2cd",
+        value: 0.99
+    }
+    GET
+    -> used to retrieve resources
+    -> response -> code: 200
+                -> text: ok
+    GET /houses/read
+    OR
+    GET /houses/read/id
+
+    PUT // OR PATCH - PATCH IS BETTER
+    -> used to replace a resources
+    -> response -> code : 200
+                -> text : ok
+    -> some devs change this to -> code : 202
+                                -> text : accepted
+    PUT /houses/update/2
+    'content-type : application/JSON'
+    {
+        address : "1, road",
+        postcode: "ab1 2cd",
+        value : 250,000
+    }
+
+    DELETE
+    -> used to remove a resources
+    -> response -> code : 200
+                -> text : ok
+    -> sometimes changed to -> code : 204
+                            -> text : No content
+    DELETE /houses/delete/2(id)
+
+    
+    </p>
+</body>
+</html>

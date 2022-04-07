@@ -14,17 +14,16 @@
     }
   </style>
 </head>
-<body>
-  <main class="text-center calc">
+<body style="color: #37C2CC">
+  <main id="main" class="text-center calc">
 
     <!-- this is the calculator form -->
     <form>
       <h1 class="h3 mb-3 fw-normal">Calculator</h1>
       
       <!-- this is the first input -->
-      <div class="form-floating">
+      <div id="uno" class="form-floating">
         <input id="input_1" class="form-control" type="number" placeholder="1"/>
-        <label for="input_1">Input 1</label>
       </div> 
       
       <!-- the buttons -->
@@ -46,18 +45,24 @@
       <!-- this is the second input -->
       <div class="form-floating mt-2">
         <input id="input_2" class="form-control" type="number" placeholder="2"/>
-        <label for="input_2">Input 2</label>
       </div>
-      
+      <div class="row mt-2">
+        <button id="button_result" class="w-100 btn btn-lg btn-info" type="button">EQUALS</button>
+      </div>
     </form>
 
     <!-- calculations should output to this list -->
     <h1 class="h4 mb-3 fw-normal mt-3">Output List</h1>
     <ul id="list_output" class="list-group">
       <!-- this is a placeholder -->
-      <li id="listoutput" class="list-group-item">42</li>
     </ul>
-
+    <div class="row mt-2">
+      <button id="button_reset" class="w-100 btn btn-lg btn-warning" type="button">RESET</button>
+    </div>
+    <div id="disDiv" class="row mt-2">
+      <button id="disobedience" class="w-100 btn btn-lg btn-danger" type="button">DO NOT PRESS!</button>
+    </div>
+    
   </main>
 
   <script type="module" src="./calculator.js"></script>
