@@ -1,20 +1,25 @@
 'use strict'
 import * as DOM from './dom.js';
 
+
+
 let total = 0;
 let equation = "";
 let add = () => {
     let input1 = DOM.inputOne.value;
     let input2 = DOM.inputTwo.value;
+    let test = document.getElementById(`input_1`);
     //let child = document.createElement(`li`);
     let child = document.getElementById(`listoutput2`);
     //child.classList.add(`list-group-item`);
     total = total + parseInt(input1) + parseInt(input2);
+    //test.setAttribute(`value`, `${total}`);
     child.innerHTML = total;
     //child.innerHTML = parseInt(input1) + " + " + parseInt(input2) + " = " + `${parseInt(input1) + parseInt(input2)}`
     equation = equation + ` + ` + parseInt(input1) + ` + ` + parseInt(input2);
     document.getElementById(`list_output2`).appendChild(child);
-    
+    test.value = total
+    document.getElementById(`uno`).appendChild(test);
 };
 let sub = () => {
     let input1 = DOM.inputOne.value;
