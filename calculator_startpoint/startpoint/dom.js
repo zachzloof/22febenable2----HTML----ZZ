@@ -1,4 +1,4 @@
-export const inputOne = document.getElementById(`input_1`);
+export let inputOne = document.getElementById(`input_1`);
 export const inputTwo = document.getElementById(`input_2`);
 export const buttonAdd = document.getElementById(`button_add`);
 export const buttonDiv = document.getElementById(`button_divide`);
