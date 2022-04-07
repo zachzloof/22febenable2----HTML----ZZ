@@ -62,7 +62,7 @@ let result = () => {
     let child2 = document.getElementById(`input_1`);
     let child3 = document.getElementById(`input_2`);
     
-    child.innerHTML = equation + ` = ` + total;
+    child.innerHTML = equation.substring(3) + ` = ` + total;
     document.getElementById(`list_output`).appendChild(child);
     
     child2.value = 0;
