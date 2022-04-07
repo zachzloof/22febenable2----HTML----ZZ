@@ -40,25 +40,37 @@ let mul = () => {
     document.getElementById(`uno`).appendChild(child);
 };
 let reset = () => {
+    let input1 = DOM.inputOne.value;
+    let input2 = DOM.inputTwo.value;
+    let child2 = document.getElementById(`input_1`);
+    let child3 = document.getElementById(`input_2`);
     let list = document.getElementById(`list_output`);
     list.innerHTML = ``;
     document.getElementById(`main`).appendChild(list);
     total = 0;
     equation = "";
+    child2.value = 0;
+    child3.value = 0;
+    document.getElementById(`uno`).appendChild(input1);
+    document.getElementById(`uno`).appendChild(input2);
 }
 let result = () => {
     let child = document.createElement(`li`);
+    child.classList.add(`list-group-item`);
     let input1 = DOM.inputOne.value;
     let input2 = DOM.inputTwo.value;
-    input1 = 0;
-    input2 = 0;
-    child.classList.add(`list-group-item`);
+    let child2 = document.getElementById(`input_1`);
+    let child3 = document.getElementById(`input_2`);
+    
     child.innerHTML = equation + ` = ` + total;
     document.getElementById(`list_output`).appendChild(child);
-    document.getElementById(`uno`).appendChild(input1);
-    document.getElementById(`uno`).appendChild(input2);
+    
+    child2.value = 0;
+    child3.value = 0;
     total = 0;
     equation = "";
+    document.getElementById(`uno`).appendChild(input1);
+    document.getElementById(`uno`).appendChild(input2);
 }
 let danger = () => {
     let body = document.querySelector('body');
