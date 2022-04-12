@@ -74,10 +74,16 @@ let result = () => {
 }
 let danger = () => {
     let body = document.querySelector('body');
+    let input1 = document.getElementById(`input_1`)
+    let input2 = document.getElementById(`input_2`)
     let message = document.createElement(`h1`);
     message.innerHTML = `I said dont touch the bumbaclart button >:(`;
     body.style.color = 'red';
     body.style.backgroundColor = 'black';
+    input1.style.backgroundColor = 'red';
+    input1.style.border = 'groove';
+    input2.style.backgroundColor = 'red';
+    input2.style.border = 'groove';
     document.querySelector(`html`).appendChild(body);
     document.getElementById(`disDiv`).appendChild(message);
 }

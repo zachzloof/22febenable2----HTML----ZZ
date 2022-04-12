@@ -1,31 +1,33 @@
-
 <!DOCTYPE html>
+
 <head>
   <!-- CSS only -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <title>Calculator Exercise</title>
 
   <style>
-    .calc { 
-      width: 100%; 
-      max-width: 330px; 
-      padding: 15px; 
-      margin: auto; 
+    .calc {
+      width: 100%;
+      max-width: 330px;
+      padding: 15px;
+      margin: auto;
     }
   </style>
 </head>
-<body style="color: #37C2CC">
+
+<body style="color: #37C2CC; background-color: blanchedalmond;">
   <main id="main" class="text-center calc">
 
     <!-- this is the calculator form -->
     <form>
       <h1 class="h3 mb-3 fw-normal">Calculator</h1>
-      
+
       <!-- this is the first input -->
       <div id="uno" class="form-floating">
-        <input id="input_1" class="form-control" type="number" placeholder="1"/>
-      </div> 
-      
+        <input id="input_1" class="form-control" type="number" placeholder="1" style="background-color: #37C2CC;" />
+      </div>
+
       <!-- the buttons -->
       <div class="row mt-2">
         <div class="col">
@@ -44,7 +46,7 @@
 
       <!-- this is the second input -->
       <div class="form-floating mt-2">
-        <input id="input_2" class="form-control" type="number" placeholder="2"/>
+        <input id="input_2" class="form-control" type="number" placeholder="2" style="background-color: #37C2CC;" />
       </div>
       <div class="row mt-2">
         <button id="button_result" class="w-100 btn btn-lg btn-info" type="button">EQUALS</button>
@@ -62,11 +64,14 @@
     <div id="disDiv" class="row mt-2">
       <button id="disobedience" class="w-100 btn btn-lg btn-danger" type="button">DO NOT PRESS!</button>
     </div>
-    
+
   </main>
 
   <script type="module" src="./calculator.js"></script>
   <!-- JavaScript Bundle with Popper -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
 </body>
+
 </html>
